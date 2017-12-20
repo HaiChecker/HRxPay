@@ -3,6 +3,8 @@ package com.shiwenping.hpay.wechatpay
 import android.app.Activity
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
+import android.text.TextUtils
+import android.util.Log
 import com.shiwenping.hpay.PaymentStatus
 import com.shiwenping.hpay.RxBus
 
@@ -45,6 +47,7 @@ object WXPayWay {
             val req = PayReq()
 
             req.appId = appId
+            Log.d("HaiChecker", json.toString())
             setValue(req, PARTNER_ID, json.optString("partnerid"), context)
             req.prepayId = json.optString("prepayid")
             setValue(req, NONCE_STR, json.optString("noncestr"), context)
@@ -94,26 +97,26 @@ object WXPayWay {
         var configValue: String? = rawValue
         when (value) {
             PARTNER_ID -> {
-                if (configValue!!.length <= 0) {
+                if (TextUtils.isEmpty(configValue)) {
                     configValue = getMetaData(context, META_PARTNER_ID)
                 }
                 req.partnerId = configValue
             }
             NONCE_STR -> {
-                if (configValue!!.length <= 0) {
+                if (TextUtils.isEmpty(configValue)) {
                     configValue = genNonceStr()
                 }
 
                 req.nonceStr = configValue
             }
             TIME_STAMP -> {
-                if (configValue!!.length <= 0) {
+                if (TextUtils.isEmpty(configValue)) {
                     configValue = genTimeStamp()
                 }
                 req.timeStamp = configValue
             }
             SIGN -> {
-                if (configValue!!.length <= 0) {
+                if (TextUtils.isEmpty(configValue)) {
                     configValue = genAppSign(req, getMetaData(context, META_API_KEY))
                 }
                 req.sign = configValue
