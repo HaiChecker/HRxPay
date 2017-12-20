@@ -27,7 +27,7 @@ import kotlin.experimental.and
  * wechat Method of payment
  */
 object WXPayWay {
-    private val PARTNER_ID = "partnerId"
+    private val PARTNER_ID = "partnerid"
     private val NONCE_STR = "nonceStr"
     private val TIME_STAMP = "timeStamp"
     private val SIGN = "sign"
@@ -45,11 +45,11 @@ object WXPayWay {
             val req = PayReq()
 
             req.appId = appId
-            setValue(req, PARTNER_ID, json.optString("partnerId"), context)
-            req.prepayId = json.optString("prepayId")
-            setValue(req, NONCE_STR, json.optString("nonceStr"), context)
-            setValue(req, TIME_STAMP, json.optString("timeStamp"), context)
-            req.packageValue = json.optString("packageValue", "Sign=WXPay")
+            setValue(req, PARTNER_ID, json.optString("partnerid"), context)
+            req.prepayId = json.optString("prepayid")
+            setValue(req, NONCE_STR, json.optString("noncestr"), context)
+            setValue(req, TIME_STAMP, json.optString("timestamp"), context)
+            req.packageValue = json.optString("package", "Sign=WXPay")
             setValue(req, SIGN, json.optString("sign"), context)
             req.extData = "app data"
 
@@ -94,7 +94,7 @@ object WXPayWay {
         var configValue: String? = rawValue
         when (value) {
             PARTNER_ID -> {
-                if (configValue!!.length <= 0 ) {
+                if (configValue!!.length <= 0) {
                     configValue = getMetaData(context, META_PARTNER_ID)
                 }
                 req.partnerId = configValue
