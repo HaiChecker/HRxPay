@@ -3,7 +3,7 @@ package com.shiwenping.hpay.wechatpay
 import android.app.Activity
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import com.cuieney.sdk.rxpay.PaymentStatus
+import com.shiwenping.hpay.PaymentStatus
 import com.shiwenping.hpay.RxBus
 
 import com.tencent.mm.opensdk.modelpay.PayReq
@@ -18,7 +18,6 @@ import java.util.Random
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
 import io.reactivex.FlowableOnSubscribe
-import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 import java.nio.charset.Charset
 import kotlin.experimental.and

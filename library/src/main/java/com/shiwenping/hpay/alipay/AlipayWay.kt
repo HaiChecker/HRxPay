@@ -3,7 +3,7 @@ package com.shiwenping.hpay.alipay
 import android.app.Activity
 
 import com.alipay.sdk.app.PayTask
-import com.cuieney.sdk.rxpay.PaymentStatus
+import com.shiwenping.hpay.PaymentStatus
 
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
