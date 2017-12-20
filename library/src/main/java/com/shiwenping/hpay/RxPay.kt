@@ -1,9 +1,11 @@
-package com.cuieney.sdk.rxpay
+package com.shiwenping.hpay
 
 import android.app.Activity
+import com.cuieney.sdk.rxpay.PayWay
+import com.cuieney.sdk.rxpay.PaymentStatus
 
 
-import com.cuieney.sdk.rxpay.alipay.AlipayWay
+import com.shiwenping.hpay.alipay.AlipayWay
 import com.cuieney.sdk.rxpay.wechatpay.WXPayWay
 
 import org.json.JSONObject

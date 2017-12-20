@@ -1,11 +1,11 @@
-package com.cuieney.sdk.rxpay.wechatpay
+package com.shiwenping.hpay.wechatpay
 
 import android.app.Activity
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-
 import com.cuieney.sdk.rxpay.PaymentStatus
-import com.cuieney.sdk.rxpay.RxBus
+import com.shiwenping.hpay.RxBus
+
 import com.tencent.mm.opensdk.modelpay.PayReq
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
 

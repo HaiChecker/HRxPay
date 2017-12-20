@@ -1,4 +1,4 @@
-package com.cuieney.sdk.rxpay.alipay
+package com.shiwenping.hpay.alipay
 
 import android.text.TextUtils
 

@@ -1,22 +1,14 @@
-package com.cuieney.sdk.rxpay.alipay
+package com.shiwenping.hpay.alipay
 
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.os.Handler
-import android.os.Message
-import android.text.TextUtils
 
 import com.alipay.sdk.app.PayTask
 import com.cuieney.sdk.rxpay.PaymentStatus
-import java.util.Observable
 
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
-import io.reactivex.FlowableEmitter
 import io.reactivex.FlowableOnSubscribe
-import io.reactivex.functions.Function
 import io.reactivex.schedulers.Schedulers
-import io.reactivex.subjects.PublishSubject
 
 /**
  * Created by cuieney on 18/08/2017.
